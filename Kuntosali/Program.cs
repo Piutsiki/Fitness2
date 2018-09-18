@@ -39,6 +39,17 @@ namespace Kuntosali
         {
             Console.WriteLine("Asiakkaan etunimi on " + etunimi + ", sukunimi on " + sukunimi + " ja ikä on " + ika + " on mies " + mies);
         }
+
+        // Metodit rasvaprosentin laskemiseen
+
+        // Pojan rasvaprosentti
+        public void PojanRasvaProsentti()
+        {
+            double bmi = this.paino / (this.pituus * this.pituus);
+            double rasvaProsentti = (1.51f * bmi) - (0.70f * this.ika) - 3.6f + 1.4f;
+            Console.WriteLine("Rasvaprosentti on: " + rasvaProsentti);
+        }
+
     }
     class Program
     {
